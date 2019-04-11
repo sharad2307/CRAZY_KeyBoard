@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>circles</title>   
+	<script type="text/javascript" src="paper-full.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.js"></script>
+	<link rel="stylesheet" type="text/css" href="circles.css">
+
+	<script type="text/paperscript" canvas="myCanvas">
+
+		var sound1 = new Howl({
+		src: ['sounds/bubbles.mp3']
+	});
+
+	var sound2 = new Howl({
+		src: ['sounds/clay.mp3']
+	});
+
+	var sound3 = new Howl({
+		src: ['sounds/confetti.mp3']
+	});
+
+	var sound4 = new Howl({
+		src: ['sounds/corona.mp3']
+	});
+
+	var sound5 = new Howl({
+		src: ['sounds/dotted-spiral.mp3']
+	});
+
+	var sound6 = new Howl({
+		src: ['sounds/flash-1.mp3']
+	});
+
+	var sound7 = new Howl({
+		src: ['sounds/flash-2.mp3']
+	});
+
+	var sound8 = new Howl({
+		src: ['sounds/flash-3.mp3']
+	});
+
+	var sound9 = new Howl({
+		src: ['sounds/glimmer.mp3']
+	});
+
+	var sound10 = new Howl({
+		src: ['sounds/moon.mp3']
+	});
+
+	var sound11 = new Howl({
+		src: ['sounds/pinwheel.mp3']
+	});
+
+	var sound12 = new Howl({
+		src: ['sounds/piston-1.mp3']
+	});
+
+	var sound13= new Howl({
+		src: ['sounds/piston-2.mp3']
+	});
+
+	var sound14= new Howl({
+		src: ['sounds/piston-3.mp3']
+	});
+
+	var sound15 = new Howl({
+		src: ['sounds/prism-1.mp3']
+	});
+
+	var sound16= new Howl({
+		src: ['sounds/prism-2.mp3']
+	});
+
+	var sound17= new Howl({
+		src: ['sounds/prism-3.mp3']
+	});
+
+	var sound18= new Howl({
+		src: ['sounds/splits.mp3']
+	});
+
+	var sound19= new Howl({
+		src: ['sounds/squiggle.mp3']
+	});
+
+	var sound20= new Howl({
+		src: ['sounds/strike.mp3']
+	});
+
+	var sound21= new Howl({
+		src: ['sounds/suspension.mp3']
+	});
+
+	var sound22= new Howl({
+		src: ['sounds/timer.mp3']
+	});
+
+	var sound23= new Howl({
+		src: ['sounds/ufo.mp3']
+	});
+
+	var sound24 = new Howl({
+		src: ['sounds/veil.mp3']
+	});
+
+	var sound25= new Howl({
+		src: ['sounds/wipe.mp3']
+	});
+
+	var sound26 = new Howl({
+		src: ['sounds/zigzag.mp3']
+	});
+
+
+
+	var circles = [];
+
+	function onKeyDown(event) {
+	var maxPoint = new Point(view.size.width,view.size.height);
+	var randomPoint = Point.random();
+	var point = maxPoint * randomPoint;
+	var newCircle = new Path.Circle(point , 400)
+
+    if(event.key == "a"){
+    sound2.play();
+    newCircle.fillColor = "orange";
+}
+else if(event.key == "s"){
+	sound3.play();
+    newCircle.fillColor = "yellow";
+}
+
+else if(event.key == "n"){
+	sound4.play();
+    newCircle.fillColor = "pink";
+}
+
+else if(event.key == "b"){
+	sound5.play();
+    newCircle.fillColor = "green";
+}
+
+else if(event.key == "v"){
+	sound6.play();
+    newCircle.fillColor = "blue";
+}
+
+else if(event.key == "c"){
+	sound7.play();
+    newCircle.fillColor = "purple";
+}
+
+else if(event.key == "x"){
+	sound8.play();
+    newCircle.fillColor = "maroon";
+}
+
+else if(event.key == "z"){
+	sound9.play();
+    newCircle.fillColor = "steelblue";
+}
+
+else if(event.key == "l"){
+	sound10.play();
+    newCircle.fillColor = "silver";
+}
+
+else if(event.key == "k"){
+	sound11.play();
+    newCircle.fillColor = "brown";
+}
+
+else if(event.key == "j"){
+	sound12.play();
+    newCircle.fillColor = "grey";
+}
+
+else if(event.key == "h"){
+	sound13.play();
+    newCircle.fillColor = "olive";
+}
+
+else if(event.key == "g"){
+	sound14.play();
+    newCircle.fillColor = "lime";
+}
+
+else if(event.key == "f"){
+	sound15.play();
+    newCircle.fillColor = "aqua";
+}
+
+else if(event.key == "d"){
+	sound16.play();
+    newCircle.fillColor = "teal";
+}
+
+else if(event.key == "p"){
+	sound17.play();
+    newCircle.fillColor = "navy";
+}
+
+else if(event.key == "o"){
+	sound18.play();
+    newCircle.fillColor = "fuchsia";
+}
+
+else if(event.key == "i"){
+	sound19.play();
+    newCircle.fillColor = "lightblue";
+}
+
+else if(event.key == "u"){
+	sound20.play();
+    newCircle.fillColor = "lightgreen";
+}
+
+else if(event.key == "y"){
+	sound21.play();
+    newCircle.fillColor = "lightseagreen";
+}
+
+else if(event.key == "t"){
+	sound22.play();
+    newCircle.fillColor = "mediumpurple";
+}
+
+else if(event.key == "r"){
+	sound23.play();
+    newCircle.fillColor = "navajowhite";
+}
+
+else if(event.key == "e"){
+	sound24.play();
+    newCircle.fillColor = "orchid";
+}
+
+else if(event.key == "w"){
+	sound25.play();
+    newCircle.fillColor = "palegreen";
+}
+
+else if(event.key == "q"){
+	sound26.play();
+    newCircle.fillColor = "salmon";
+}
+else if(event.key == "m"){
+	sound4.play();
+    newCircle.fillColor = "teal";
+}
+else{
+	sound4.play();
+    newCircle.fillColor = "teal";
+}
+
+	
+	circles.push(newCircle);
+
+}
+
+function onFrame(event){
+for(var i=0; i< circles.length ; i++){
+circles[i].fillColor.hue += 1;
+circles[i].scale(.9);
+}
+}
+
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
